@@ -93,6 +93,9 @@ a:visited {
 .homepage__hero--heading {
   font-size: 6rem;
 }
+.homepage__hero--heading span {
+    color: #008080;
+}
 .homepage__hero--details {
   font-size: 1.75rem;
   margin: 4rem 0;
@@ -203,7 +206,7 @@ a:visited {
     display: none;
   }
   .homepage__hero {
-    width: 100%;
+    flex-basis: 100%;
   }
   .services__cards{
     flex-wrap: wrap;
@@ -211,17 +214,18 @@ a:visited {
 }
 
 @media only screen and (max-width: 600px) {
+    .homepage{
+        padding: 0 3rem;
+    }
   .homepage__hero--links {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.50rem;
     justify-content: center;
   }
   .homepage__hero--link {
-    border-radius: 30px;
-    font-size: 1rem;
-    min-width: 13rem;
-    text-align: center;
+    font-size: 1.25rem;
+    min-width: 15rem;
   }
   .homepage__hero--link:last-of-type span {
     margin: 0.75rem;
