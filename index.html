@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PAPS | For you pet needs!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -12,6 +16,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    
   </head>
   <body>
     <header class="header">
@@ -96,8 +101,8 @@
           </div>
         </div>
       </section>
-      <section class="testimonials">
-        <h1 class="testimonials__title">what they say about paps?</h1>
+      
+        <!-- <h1 class="testimonials__title">what they say about paps?</h1>
         <div class="testimonials__gallery">
           <div class="testimonials__gallery--card">
             <img
@@ -117,9 +122,86 @@
             </div>
           </div>
           <div class="gallery__controls"></div>
+        </div> -->
+        
+      
+      <section class="testimonials">
+        <h1 class="testimonials__title">what they say about paps?
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              
+              <div class="testimonials__gallery--card">
+                <img
+                  src="/assets/reviews 3.jpg"
+                  alt="Image 2"
+                  class="gallery__item"
+                />
+                <div class="card__rating">
+                  <img src="" alt="" />
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                    perspiciatis sequi, non magni adipisci recusandae.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="testimonials__gallery--card">
+                <img
+                  src="/assets/reviews 2.jpg"
+                  alt="Image 2"
+                  class="gallery__item"
+                />
+                <div class="card__rating">
+                  <img src="" alt="" />     
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                    perspiciatis sequi, non magni adipisci recusandae.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              
+              <div class="testimonials__gallery--card">
+                <img
+                  src="/assets/reviews1.jpg"
+                  alt="Image 2"
+                  class="gallery__item"
+                />
+                <div class="card__rating">
+                  <img src="" alt="" />
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                    perspiciatis sequi, non magni adipisci recusandae.
+                  </p>
+                </div>
+              </div>
+            </div>  
         </div>
+        <div class="swiper-pagination"></div>
+      </section>
+      <section class="booking">
+
       </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

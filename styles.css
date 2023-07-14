@@ -44,6 +44,7 @@ a:visited {
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 .logo {
   height: 10rem;
@@ -235,9 +236,14 @@ a:visited {
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-m);
 }
+.testimonials__card{
+  width: 100%;
+  border-radius: 20px;
+
+}
 .testimonials__gallery--card{
   height: 20rem;
-  width: 35rem;
+  width: 100%;
 }
 .gallery__item{
   width: 100%;
@@ -247,9 +253,40 @@ a:visited {
 }
 .card__rating{
   text-align: center;
+  font-size: 1rem;
+  width: 100%;
+}
+.card__rating p {
+  margin-top: 2rem;
+  font-weight: 700;
+  text-transform: none;
+}
+.card__rating i {
+  color: var(--color-3);
+}
+.card--image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 32rem;
+  height: 40rem;
 }
 
-
+.booking {
+  min-height: 50rem;
+}
 
 
 @media only screen and (max-width: 1100px) {
@@ -285,5 +322,8 @@ a:visited {
   }
   .homepage__hero--links p {
     font-size: 1rem;
+  }
+  .testimonials{
+    padding: 1rem;
   }
 }
