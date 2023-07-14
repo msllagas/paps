@@ -338,10 +338,15 @@ a:visited {
   font-weight: lighter;
   text-transform: none;
   font-size: 1.5rem;
+  display: none;
 }
 .card__rating .fa-paw {
   font-size: 3rem;
   margin: 0.75rem auto;
+}
+
+.star--container {
+  display: none;
 }
 
 .card__rating .fa-star {
@@ -363,6 +368,16 @@ a:visited {
   background-size: cover;
   width: 32rem;
   height: 40rem;
+}
+.sample-slider .swiper-wrapper {
+  transition-timing-function: linear;
+}
+.swiper-slide-active .testimonials__gallery--card .card__rating p,
+.swiper-slide-active
+  .testimonials__gallery--card
+  .card__rating
+  .star--container {
+  display: block;
 }
 
 .booking {
@@ -400,7 +415,7 @@ a:visited {
   font-size: 1.5rem;
   min-width: 18rem;
   text-align: center;
-  transition: var(--transition-backgroundColor-1)
+  transition: var(--transition-backgroundColor-1);
 }
 .contact__link:last-of-type span {
   margin: 0.75rem;
@@ -429,7 +444,7 @@ a:visited {
   min-width: 18rem;
   text-align: center;
   margin-bottom: 2rem;
-  transition: var(--transition-backgroundColor-1)
+  transition: var(--transition-backgroundColor-1);
 }
 .footer {
   background-color: var(--color-1);
@@ -599,6 +614,9 @@ a:visited {
   .services__title {
     font-size: 4rem;
   }
+  .testimonials {
+    padding: 5rem 2rem;
+  }
   .testimonials__title {
     font-size: 4rem;
   }
@@ -608,7 +626,7 @@ a:visited {
   .booking__center {
     width: 100%;
   }
-  .booking__links{
+  .booking__links {
     gap: 1.5rem;
   }
   .booking__links p {
@@ -622,5 +640,8 @@ a:visited {
   }
   .homepage__image {
     flex: 0 0 100%;
+  }
+  .footer__info {
+    margin-bottom: 3rem;
   }
 }
