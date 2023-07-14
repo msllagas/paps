@@ -38,7 +38,7 @@ a:visited {
 }
 
 .header {
-  background-color: var(--white);
+  /* background-color: var(--white); */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,6 +49,10 @@ a:visited {
   top: 0;
   width: 100%;
   z-index: 100;
+  transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+}
+.header.scrolled {
+  background-color: var(--white)
 }
 .logo {
   height: 10rem;
@@ -62,7 +66,7 @@ a:visited {
 
 .nav__link:link,
 .nav__link:visited {
-  color: var(--color-2);
+  color: var(--white);
   font-weight: 500;
   display: block;
   padding: 1.5rem 3rem;
@@ -70,6 +74,9 @@ a:visited {
   align-items: center;
   font-family: var(--font-family-condensed);
   letter-spacing: var(--letter-spacing-s);
+}
+.nav__link.scrolled {
+  color: var(--color-2);
 }
 
 .btn__sched:link,
@@ -144,7 +151,9 @@ a:visited {
   right: 2.5rem;
   font-size: 6rem;
 }
-
+.sidenav .close__btn{
+  outline: none
+}
 
 .homepage {
   background-color: var(--color-1);
@@ -506,10 +515,13 @@ a:visited {
   .header__menu{
     display: block;
     font-size: 6rem;
-    color: var(--color-1);
+    color: var(--white);
     background-color: transparent;
     border: none;
     cursor: pointer;
+  }
+  .header__menu.scrolled{
+    color: var(--color-1);
   }
   .homepage__hero {
     flex-basis: 100%;
