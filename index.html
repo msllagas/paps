@@ -31,7 +31,22 @@
           ><span>schedule Appointment</span></a
         >
       </ul>
-      <button class="btn__menu"></button>
+      <button class="header__menu" onclick="openNav()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div id="overlay" class="overlay" onclick="closeNav()"></div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="close__btn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">FAQs</a>
+        <a href="#">Contact Us</a>
+      </div>
+
     </header>
     <main>
       <div class="homepage">
@@ -57,8 +72,7 @@
           </div>
         </div>
         <div class="homepage__image">
-          <img src="/assets/heroimage.png" alt="">
-
+          <img src="/assets/heroimage.png" alt="" />
         </div>
       </div>
 
@@ -121,7 +135,7 @@
                 <div class="card__rating">
                   <div>
                     <i class="fa-solid fa-paw"></i>
-                  </div>        
+                  </div>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -141,10 +155,10 @@
                   alt="Image 2"
                   class="gallery__item"
                 />
-                <div class="card__rating">        
+                <div class="card__rating">
                   <div>
                     <i class="fa-solid fa-paw"></i>
-                  </div>  
+                  </div>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -164,10 +178,10 @@
                   alt="Image 2"
                   class="gallery__item"
                 />
-                <div class="card__rating">  
+                <div class="card__rating">
                   <div>
                     <i class="fa-solid fa-paw"></i>
-                  </div>  
+                  </div>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -236,7 +250,7 @@
           </div>
         </div>
         <hr />
-        <h3 class="legal">&copy; 2023 Developed by Alexandre Cauline Isip </h3>
+        <h3 class="legal">&copy; 2023 Developed by Alexandre Cauline Isip</h3>
       </footer>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

@@ -95,9 +95,56 @@ a:visited {
 .fa-envelope {
   margin: 0 1rem;
 }
-.btn__menu {
+.header__menu {
   display: none;
 }
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1;
+  overflow-y: hidden;
+}
+.overlay.show {
+  display: block;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: var(--color-2);
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 6rem;
+}
+
+.sidenav a {
+  color: white;
+  font-size: 2rem;
+  padding: 1.75rem;
+  font-family: var(--font-family-mono);
+  display: block;
+  text-decoration: none;
+  transition: 0.3s;
+  white-space: nowrap; 
+}
+.sidenav a:hover{
+  color: var(--color-3);
+}
+.sidenav .close__btn {
+  position: absolute;
+  top: -15px;
+  right: 2.5rem;
+  font-size: 6rem;
+}
+
 
 .homepage {
   background-color: var(--color-1);
@@ -124,6 +171,7 @@ a:visited {
   font-size: 1.75rem;
   margin: 4rem 0;
   font-family: var(--font-family-questrial);
+  line-height: 2.5rem;
 }
 .homepage__hero--links {
   display: flex;
@@ -215,12 +263,12 @@ a:visited {
   text-align: center;
   max-width: 20rem;
   font-family: var(--font-family-cherrybomb);
+  letter-spacing: var(--letter-spacing-s);
 }
 .card__details p {
   font-size: 1.5rem;
   font-family: var(--font-family-mono);
   color: rgba(0, 0, 0, 0.582);
-
 }
 .card__details--btn {
   color: var(--white);
@@ -330,7 +378,8 @@ a:visited {
   font-family: var(--font-family-cherrybomb);
   font-size: 8rem;
   max-width: 80%;
-  margin: auto;
+  margin: 2rem auto;
+  line-height: 7.5rem;
 }
 .booking__center span {
   color: var(--color-2);
@@ -454,13 +503,20 @@ a:visited {
   .nav {
     display: none;
   }
+  .header__menu{
+    display: block;
+    font-size: 6rem;
+    color: var(--color-1);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
   .homepage__hero {
     flex-basis: 100%;
   }
   .services__cards {
     flex-wrap: wrap;
   }
-
   .booking{
     padding: 5rem 2rem;
   }
@@ -492,7 +548,6 @@ a:visited {
   .homepage {
     padding: 0 3rem;
     justify-content: center;
-    
   } 
   .homepage__hero--links {
     gap: 1.5rem;
@@ -501,6 +556,9 @@ a:visited {
   }
   .homepage__hero--links p {
     font-size: 1rem;
+  }
+  .header__menu{
+    font-size: 4rem;
   }
   .services__title {  
     font-size: 4rem;
