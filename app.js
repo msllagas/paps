@@ -3,12 +3,13 @@ var swiper = new Swiper(".mySwiper", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
+    initialSlide: 1,
   coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
+    rotate: 0, // 50
+    stretch: -20, // 0
     depth: 100,
-    modifier: 1,
-    slideShadows: true,
+    modifier: 2, // 1
+    slideShadows: false,
   },
   pagination: {
     el: ".swiper-pagination",
@@ -50,13 +51,13 @@ window.addEventListener("scroll", function () {
     navLink.forEach(function (link) {
       link.classList.add("scrolled");
     });
-    headerMenu.classList.add('scrolled')
+    headerMenu.classList.add("scrolled");
   } else {
     header.classList.remove("scrolled");
     navLink.forEach(function (link) {
       link.classList.remove("scrolled");
     });
 
-    headerMenu.classList.remove('scrolled')
+    headerMenu.classList.remove("scrolled");
   }
 });
