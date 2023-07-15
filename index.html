@@ -19,13 +19,27 @@
   </head>
   <body>
     <header class="header">
-      <img src="/assets/logo.png" alt="paps shop logo" class="logo" />
+      <img src="/assets/logo_resized.png" alt="paps shop logo" class="logo" />
       <ul class="nav">
-        <li class="nav__item"><a href="" class="nav__link">home</a></li>
-        <li class="nav__item"><a href="" class="nav__link">about us</a></li>
-        <li class="nav__item"><a href="" class="nav__link">services</a></li>
-        <li class="nav__item"><a href="" class="nav__link">faqs</a></li>
-        <li class="nav__item"><a href="" class="nav__link">contact us</a></li>
+        <li class="nav__item">
+          <a href="#home" class="nav__link" data-page="home">home</a>
+        </li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link" data-page="about">about us</a>
+        </li>
+        <li class="nav__item">
+          <a href="#services" class="nav__link" data-page="services"
+            >services</a
+          >
+        </li>
+        <li class="nav__item">
+          <a href="#faqs" class="nav__link" data-page="faqs">faqs</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link" data-page="contact"
+            >contact us</a
+          >
+        </li>
         <a href="" class="btn__sched btn"
           ><i class="fa-solid fa-envelope"></i
           ><span>schedule Appointment</span></a
@@ -40,189 +54,335 @@
         <a href="javascript:void(0)" class="close__btn" onclick="closeNav()"
           >&times;</a
         >
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Services</a>
-        <a href="#">FAQs</a>
-        <a href="#">Contact Us</a>
+        <a href="#home" onclick="closeNav()" data-page="home" class="side__link"
+          >Home</a
+        >
+        <a
+          href="#about"
+          onclick="closeNav()"
+          data-page="about"
+          class="side__link"
+          >About Us</a
+        >
+        <a
+          href="#services"
+          onclick="closeNav()"
+          data-page="services"
+          class="side__link"
+          >Services</a
+        >
+        <a href="#faqs" onclick="closeNav()" data-page="faqs" class="side__link"
+          >FAQs</a
+        >
+        <a
+          href="#contact"
+          onclick="closeNav()"
+          data-page="contact"
+          class="side__link"
+          >Contact Us</a
+        >
       </div>
     </header>
     <main>
-      <div class="homepage">
-        <div class="homepage__hero">
-          <h1 class="homepage__hero--heading">
-            Where <span>Astig</span> love and care happens!
-          </h1>
-          <p class="homepage__hero--details">
-            P.A.P.S (Pinaka Astig Pet Service) is a newly established Pet Hotel,
-            Grooming, and Supplies located in front of Enchanted Kingdom. We may
-            not be the cheapest not the most expensive but we are the Pinaka
-            Astig!
-          </p>
-          <div class="homepage__hero--links questrial">
-            <a href="" class="homepage__hero--link">book now</a>
+      <!-- Home Page -->
+      <div class="page" id="home">
+        <div class="homepage">
+          <div class="homepage__hero">
+            <h1 class="homepage__hero--heading">
+              Where <span>Astig</span> love and care happens!
+            </h1>
+            <div class="homepage__image no-display">
+              <img src="/assets/heroimage.png" alt="" />
+            </div>
+            <p class="homepage__hero--details">
+              P.A.P.S (Pinaka Astig Pet Service) is a newly established Pet
+              Hotel, Grooming, and Supplies located in front of Enchanted
+              Kingdom. We may not be the cheapest not the most expensive but we
+              are the Pinaka Astig!
+            </p>
+            <div class="homepage__hero--links questrial">
+              <a href="" class="homepage__hero--link">book now</a>
+              <p>OR</p>
+              <a href="" class="homepage__hero--link"
+                ><i class="fa-solid fa-phone"></i>
+                <span style="text-decoration: underline; white-space: nowrap"
+                  >0905 553 0204</span
+                ></a
+              >
+            </div>
+          </div>
+          <div class="homepage__image display">
+            <img src="/assets/heroimage.png" alt="" />
+          </div>
+        </div>
+
+        <!-- Our Services -->
+        <section class="services questrial">
+          <div class="services__header">
+            <h1 class="services__title">Our Services</h1>
+            <img src="/assets/swirl_divider.png" alt="" class="swirl-divider" />
+            <p class="services__detail">Choose one of the below to continue</p>
+          </div>
+          <div class="services__cards">
+            <div class="services__card">
+              <img src="/assets/boarding.png" alt="" class="card__logo" />
+              <div class="card__details">
+                <h1>Pet Boarding</h1>
+                <p>
+                  We offer a comfortable and secure environment for your pets
+                  when you need to be away.
+                </p>
+                <a href="#" class="card__details--btn btn">Learn More</a>
+              </div>
+            </div>
+            <div class="services__card">
+              <img src="/assets/grooming.png" alt="" class="card__logo" />
+              <div class="card__details">
+                <h1>Professional Grooming</h1>
+                <p>
+                  Our skilled and compassionate groomers specialize in keeping
+                  your pets looking and feeling their best.
+                </p>
+                <a href="" class="card__details--btn btn">Learn More</a>
+              </div>
+            </div>
+            <div class="services__card">
+              <img src="/assets/products.png" alt="" class="card__logo" />
+              <div class="card__details">
+                <h1>Specialized Products</h1>
+                <p>
+                  Our selection of specialized pet shampoos and conditioners are
+                  formulated with gentle ingredients to enure thorough yet mild
+                  cleanse of your pets.
+                </p>
+                <a href="" class="card__details--btn btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+          <h1 class="testimonials__title">what they say about paps?</h1>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonials__gallery--card">
+                  <img
+                    src="/assets/reviews 3.jpg"
+                    alt="Image 2"
+                    class="gallery__item"
+                  />
+                  <div class="card__rating">
+                    <div>
+                      <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <div class="star--container">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>
+                      The grooming service provided was top-notch. My pet came
+                      out looking fresh and fabulous, with a beautifully trimmed
+                      coat and clean nails. The groomers were skilled and
+                      patient, ensuring that my pet felt comfortable throughout
+                      the process.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials__gallery--card">
+                  <img
+                    src="/assets/reviews 2.jpg"
+                    alt="Image 2"
+                    class="gallery__item"
+                  />
+                  <div class="card__rating">
+                    <div>
+                      <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <div class="star--container">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>
+                      I highly recommend PAPS. The combination of excellent
+                      grooming services and top-notch accommodations makes it a
+                      fantastic choice for any pet owner. I am confident that
+                      your furry companion will be pampered and well-cared for
+                      during their visit. Five stars!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonials__gallery--card">
+                  <img
+                    src="/assets/reviews1.jpg"
+                    alt="Image 2"
+                    class="gallery__item"
+                  />
+                  <div class="card__rating">
+                    <div>
+                      <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <div class="star--container">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>
+                      he pet hotel accommodations were equally impressive. The
+                      facility was clean, well-maintained, and designed with
+                      pets' comfort in mind. The rooms were spacious and
+                      equipped with cozy bedding, toys, and even a dedicated
+                      play area. I felt at ease knowing my pet was in a safe and
+                      enjoyable environment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+
+        <!-- Booking -->
+        <section class="booking questrial">
+          <div class="booking__center">
+            <h1>Get Your <span>Astig Discount</span> Today!</h1>
+            <p>for Long Term Stays Over 30 Days</p>
+          </div>
+          <div class="booking__links">
+            <a href="" class="contact__link btn">book now</a>
             <p>OR</p>
-            <a href="" class="homepage__hero--link"
+            <a href="" class="contact__link btn"
               ><i class="fa-solid fa-phone"></i>
               <span style="text-decoration: underline; white-space: nowrap"
-                >0976 336 7697</span
+                >0905 553 0204</span
               ></a
             >
           </div>
-        </div>
-        <div class="homepage__image">
-          <img src="/assets/heroimage.png" alt="" />
-        </div>
+        </section>
       </div>
+      <!-- About Us Page -->
+      <div class="page" id="about">
+        <section class="about__hero">
+          <div class="image--container left">
+            <img src="/assets/aboutus1.jpg" alt="" />
+          </div>
+          <div class="image--container right">
+            <img src="/assets/aboutus2.jpg" alt="" />
+          </div>
+          <div class="hero__headline">
+            <h1>About Us</h1>
+            <img src="/assets/swirl_divider.png" alt="" class="swirl-divider" />
+            <p>
+              Welcome to our premier pet hotel and grooming facility, where we
+              provide exceptional care and services for your beloved furry
+              companions.
+            </p>
+            <p>
+              Our establishment is designed to cater to the needs of both dogs
+              and cats, ensuring they receive the utmost comfort, attention, and
+              pampering throughout their stay.
+            </p>
+            <a href="" class="contact__link btn">why us?</a>
+          </div>
+        </section>
+        <section class="about__headline">
+          <div class="headline__text">
+            <!-- Insert Icon here -->
+            <i class="fa-solid fa-chevrons-down"></i>
+            <p>So... Why you should choose us?</p>
+            <h2>
+              Because we prioritize the well-being and happiness of your pets.
+            </h2>
 
-      <!-- Our Services -->
-      <section class="services questrial">
-        <div class="services__header">
-          <h1 class="services__title">Our Services</h1>
-          <p class="services__detail">Choose one of the below to continue</p>
-        </div>
-        <div class="services__cards">
-          <div class="services__card">
-            <img src="/assets/boarding.png" alt="" class="card__logo" />
-            <div class="card__details">
-              <h1>Pet Boarding</h1>
-              <p>
-                We offer a comfortable and secure environment for your pets when
-                you need to be away.
-              </p>
-              <a href="#" class="card__details--btn btn">Learn More</a>
+            <img src="/assets/swirl_divider.png" alt="" class="swirl-divider" />
+          </div>
+          <div class="headline__text--body">
+            <p>
+              At our pet hotel, we offer spacious, clean, and comfortable
+              accommodations, ensuring that each guest has a cozy place to rest
+              and relax. Our rooms are thoughtfully designed to mimic a home-
+              like environment, complete with comfortable bedding, toys, and
+              soothing background music to create a calming atmosphere.
+            </p>
+            <p>
+              Our dedicated and highly trained staff members are passionate
+              animal lovers who are committed to providing personalized care for
+              each guest. They are experienced in handling various breeds and
+              temperaments, ensuring your pet feels safe, secure, and loved
+              during their stay. We prioritize individualized attention and
+              ensure that all dietary and medical needs are met, including
+              administering medication if required.
+            </p>
+          </div>
+          <div class="headline__quote">
+            <div class="quote--body">
+              <i class="fa-solid fa-quote-left"></i>
+              <h2>
+                <em
+                  >Whether you're heading out of town or simply need a day of
+                  pampering for your pet,<span>
+                    our pet hotel and grooming facility is the perfect choice.
+                  </span></em
+                >
+              </h2>
+              <i class="fa-solid fa-quote-right"></i>
+            </div>
+            <h3 class="headline__quote--owner">&HorizontalLine; PAPS</h3>
+          </div>
+          <div class="headline__showcase">
+            <div class="headline__showcase--title">
+              <h2 class="cherry">
+                Contact Us Now For All Your Pet Grooming and Shelter Needs!
+              </h2>
+            </div>
+            <div class="headline__showcase--links">
+              <a href="" class="contact__link btn">book now</a>
+              <p>OR</p>
+              <a href="" class="contact__link btn"
+                ><i class="fa-solid fa-phone"></i>
+                <span style="text-decoration: underline; white-space: nowrap"
+                  >0905 553 0204</span
+                ></a
+              >
+            </div>
+            <div class="headline__showcase--image">
+              <img src="/assets/aboutus3.png" alt="" />
             </div>
           </div>
-          <div class="services__card">
-            <img src="/assets/grooming.png" alt="" class="card__logo" />
-            <div class="card__details">
-              <h1>Professional Grooming</h1>
-              <p>
-                Our skilled and compassionate groomers specialize in keeping
-                your pets looking and feeling their best.
-              </p>
-              <a href="" class="card__details--btn btn">Learn More</a>
-            </div>
-          </div>
-          <div class="services__card">
-            <img src="/assets/products.png" alt="" class="card__logo" />
-            <div class="card__details">
-              <h1>Specialized Products</h1>
-              <p>
-                Our selection of specialized pet shampoos and conditioners are
-                formulated with gentle ingredients to enure thorough yet mild
-                cleanse of your pets.
-              </p>
-              <a href="" class="card__details--btn btn">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Testimonials -->
-      <section class="testimonials">
-        <h1 class="testimonials__title">what they say about paps?</h1>
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonials__gallery--card">
-                <img
-                  src="/assets/reviews 3.jpg"
-                  alt="Image 2"
-                  class="gallery__item"
-                />
-                <div class="card__rating">
-                  <div>
-                    <i class="fa-solid fa-paw"></i>
-                  </div>
-                  <div class="star--container">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Excepturi perspiciatis sequi, non magni adipisci recusandae.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonials__gallery--card">
-                <img
-                  src="/assets/reviews 2.jpg"
-                  alt="Image 2"
-                  class="gallery__item"
-                />
-                <div class="card__rating">
-                  <div>
-                    <i class="fa-solid fa-paw"></i>
-                  </div>
-                  <div class="star--container">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Excepturi perspiciatis sequi, non magni adipisci recusandae.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="testimonials__gallery--card">
-                <img
-                  src="/assets/reviews1.jpg"
-                  alt="Image 2"
-                  class="gallery__item"
-                />
-                <div class="card__rating">
-                  <div>
-                    <i class="fa-solid fa-paw"></i>
-                  </div>
-                  <div class="star--container">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                  </div>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Excepturi perspiciatis sequi, non magni adipisci recusandae.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-
-      <!-- Booking -->
-      <section class="booking questrial">
-        <div class="booking__center">
-          <h1>Get Your <span>Astig Discount</span> Today!</h1>
-          <p>for Long Term Stays Over 30 Days</p>
-        </div>
-        <div class="booking__links">
-          <a href="" class="contact__link btn">book now</a>
-          <p>OR</p>
-          <a href="" class="contact__link btn"
-            ><i class="fa-solid fa-phone"></i>
-            <span style="text-decoration: underline; white-space: nowrap"
-              >0976 336 7697</span
-            ></a
-          >
-        </div>
-      </section>
-
+        </section>
+      </div>
+      <!-- Services Page -->
+      <div class="page" id="services">
+        <section style="min-height: 100vh; background-color: dodgerblue">
+          <h1>Services Page</h1>
+        </section>
+      </div>
+      <!-- FAQs Page -->
+      <div class="page" id="faqs">
+        <section style="min-height: 100vh; background-color: dodgerblue">
+          <h1>FAQs Page</h1>
+        </section>
+      </div>
+      <!-- Contact Us Page -->
+      <div class="page" id="contact">
+        <section style="min-height: 100vh; background-color: dodgerblue">
+          <h1>Contact Page</h1>
+        </section>
+      </div>
       <!-- Footer -->
       <footer class="footer">
         <div class="footer__info">
@@ -231,12 +391,12 @@
             <div class="socials--links">
               <div class="socials__container">
                 <a href="">
-                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-facebook-f"></i>
                 </a>
               </div>
               <div class="socials__container">
                 <a href="">
-                  <i class="fa-brands fa-square-instagram"></i>
+                  <i class="fa-brands fa-instagram"></i>
                 </a>
               </div>
               <div class="socials__container">
