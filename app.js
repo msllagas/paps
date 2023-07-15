@@ -32,6 +32,8 @@ function openNav() {
   }
 }
 
+// Functions for opening and closing of hamburger menu
+
 function closeNav() {
   const sidebar = document.getElementById("mySidenav");
   const overlay = document.getElementById("overlay");
@@ -42,6 +44,16 @@ function closeNav() {
   document.body.style.overflow = "unset";
 }
 
+function handleNavLinkClick(event) {
+  closeNav();
+}
+
+const sideNavLinks = document.querySelectorAll('#mySidenav a');
+sideNavLinks.forEach((link) => {
+  link.addEventListener('click', handleNavLinkClick);
+});
+
+// Function to change the background color of heaser when scrolled
 var header = document.querySelector(".header");
 var navLink = document.querySelectorAll(".nav__link");
 var headerMenu = document.querySelector(".header__menu");
@@ -61,3 +73,58 @@ window.addEventListener("scroll", function () {
     headerMenu.classList.remove("scrolled");
   }
 });
+
+
+
+// functions for changing pages
+
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach((page) => {
+    if (page.id === pageId) {
+      page.style.display = 'block';
+    } else {
+      page.style.display = 'none';
+    }
+  });
+  window.scrollTo(0, 0);
+}
+
+function handleNavLinkClick(event) {
+  event.preventDefault();
+
+  const target = event.target;
+  const pageId = target.getAttribute('data-page');
+  if (!pageId) {
+    return;
+  }
+
+  showPage(pageId);
+
+  const navItems = document.querySelectorAll('.side__link');
+  navItems.forEach((navItem) => {
+    navItem.classList.remove('side-nav__item--active');
+  });
+
+  target.classList.add('side-nav__item--active');
+
+}
+
+const topNav = document.querySelector('.nav');
+topNav.addEventListener('click', handleNavLinkClick);
+
+const sideNav = document.querySelector('.sidenav');
+sideNav.addEventListener('click', handleNavLinkClick);
+
+// Show the home page and set the active class for the first link by default
+showPage('home');
+const firstNavItem = document.querySelector('.nav__link');
+firstNavItem.classList.add('side-nav__item--active');
+
+
+
+
+
+
+
+
