@@ -781,7 +781,7 @@ a:visited {
   align-self: flex-start;
   justify-content: center;
   margin: 2.25rem auto;
-  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.301);
+  box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.4);
   font-family: var(--font-family-questrial);
 }
 .faqs__card--title {
