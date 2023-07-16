@@ -117,9 +117,26 @@ const sideNav = document.querySelector('.sidenav');
 sideNav.addEventListener('click', handleNavLinkClick);
 
 // Show the home page and set the active class for the first link by default
-showPage('home');
+showPage('faqs');
 const firstNavItem = document.querySelector('.nav__link');
 firstNavItem.classList.add('side-nav__item--active');
+
+
+// Function for the Card Accordion
+const accordionItems = document.querySelectorAll('.faqs__card');
+
+accordionItems.forEach(item => {
+  const header = item.querySelector('.faqs__card--title');
+  const content = item.querySelector('.faqs__card--content');
+  const icon = item.querySelector('.fa-caret-right'); // Update the selector for your icon element
+  header.addEventListener('click', () => {
+    item.classList.toggle('active');
+
+    content.classList.toggle('show');
+    icon.classList.toggle('fa-caret-down');
+    icon.classList.toggle('fa-caret-right');
+  });
+});
 
 
 
