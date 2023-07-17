@@ -969,7 +969,7 @@ a:visited {
 }
 .terms__container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 2rem 0;
 }
 .terms__container input[type="checkbox"] {
@@ -979,6 +979,7 @@ a:visited {
 }
 .terms__container label {
   font-size: 1.5rem;
+  align-self: center;
 }
 .contacts__form--container .btn__sched {
   width: 60%;
@@ -1100,6 +1101,9 @@ a:visited {
   }
   .contacts__container{
     gap: 6rem;
+  }
+  .contacts__form--container label:not(.terms__container label) {
+    font-size: 1.75rem;
   }
   .contacts__information {
     flex-basis: 100%;
