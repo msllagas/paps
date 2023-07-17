@@ -40,10 +40,15 @@
             >contact us</a
           >
         </li>
-        <a href="" class="btn__sched btn"
-          ><i class="fa-solid fa-envelope"></i
-          ><span>schedule Appointment</span></a
-        >
+        <li class="nav__item">
+          <a
+            href="#appointment"
+            class="btn__sched btn nav__link"
+            data-page="appointment"
+            ><i class="fa-solid fa-envelope"></i
+            ><span>schedule Appointment</span></a
+          >
+        </li>
       </ul>
       <button class="header__menu" onclick="openNav()">
         <i class="fa-solid fa-bars"></i>
@@ -80,6 +85,13 @@
           data-page="contact"
           class="side__link"
           >Contact Us</a
+        >
+        <a
+          href="#appointment"
+          onclick="closeNav()"
+          data-page="appointment"
+          class="side__link"
+          >Schedule Appointment</a
         >
       </div>
     </header>
@@ -754,6 +766,91 @@
                 </form>
               </div>
             </div>
+          </div>
+        </section>
+      </div>
+      <!-- Schedule Appointmen Page -->
+      <div class="page" id="appointment">
+        <section class="appointment__hero">
+          <div class="appointment__hero--title">
+            <h1>Schedule Appointment</h1>
+            <img src="/assets/swirl_divider.png" alt="" class="swirl-divider" />
+            <p>
+              Kindly provide your information in the form provided below. We
+              will promptly respond to organize a convenient date and time for
+              your pet's appointment.
+            </p>
+          </div>
+        </section>
+        <section class="appointment__form--wrapper">
+          <h3>appointment scheduling form</h3>
+          <div class="appointment__form--container">
+            <form action="">
+              <h4>About You</h4>
+              <label for="a-fname">Name</label>
+              <div class="name-input__container">
+                <input
+                  type="text"
+                  id="acname"
+                  name="cname"
+                  placeholder="First Name"
+                />
+                <input
+                  type="text"
+                  id="a-cname"
+                  name="cname"
+                  placeholder="Last Name"
+                /><br />
+              </div>
+              <label for="a-email">Email</label>
+              <input
+                type="email"
+                id="a-email"
+                name="a-email"
+                placeholder="Email"
+              />
+              <label for="a-phone">Phone</label>
+              <input
+                type="tel"
+                id="a-phone"
+                name="a-phone"
+                placeholder="Phone"
+              />
+              <h4>Your Pet</h4>
+              <label for="a-fname">Pet Name</label>
+              <input
+                type="text"
+                id="a-pname"
+                name="a-pname"
+                placeholder="Pet Name"
+              />
+
+              <label for="breed">Breed</label>
+              <input type="text" id="breed" name="breed" placeholder="Breed" />
+              <label for="reason"
+                >Please indicate if for GROOMING or HOTEL</label
+              >
+              <input
+                type="text"
+                id="reason"
+                name="reason"
+                placeholder="GROOMING or HOTEL"
+              />
+              <label for="notes">Notes for the Grommer/Caretaker</label>
+              <textarea
+                name="notes"
+                id="notes"
+                cols="30"
+                rows="10"
+                placeholder="Notes for the Grommer/Caretaker"
+              ></textarea>
+              <div class="terms__container">
+                <input type="checkbox" id="termsbox">
+                <label for="termsbox">I HAVE READ AND ACCEPT THE PRIVACY POLICY
+                  AGREEMENT</label>
+              </div>
+              <a href="" class="btn__sched btn"><span>Send Appointment Request</span></a>
+            </form>
           </div>
         </section>
       </div>
