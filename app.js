@@ -53,7 +53,13 @@ sideNavLinks.forEach((link) => {
   link.addEventListener('click', handleNavLinkClick);
 });
 
-// Function to change the background color of heaser when scrolled
+const footerLinks = document.querySelectorAll('.footer__info--links a')
+footerLinks.forEach((link) => {
+  link.addEventListener('click', handleNavLinkClick);
+});
+
+
+// Function to change the background color of header when scrolled
 var header = document.querySelector(".header");
 var navLink = document.querySelectorAll(".nav__link");
 var headerMenu = document.querySelector(".header__menu");
@@ -74,8 +80,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-
 // functions for changing pages
 
 function showPage(pageId) {
@@ -88,6 +92,13 @@ function showPage(pageId) {
     }
   });
   window.scrollTo(0, 0);
+
+  const header = document.querySelector('.header');
+  if (pageId === 'home') {
+    header.classList.remove('other-page-header');
+  } else {
+    header.classList.add('other-page-header');
+  }
 }
 
 function handleNavLinkClick(event) {
@@ -120,6 +131,7 @@ sideNav.addEventListener('click', handleNavLinkClick);
 showPage('home');
 const firstNavItem = document.querySelector('.nav__link');
 firstNavItem.classList.add('side-nav__item--active');
+
 
 // Function for changing tabs in boarding services
 function openTab(event, tabName) {
