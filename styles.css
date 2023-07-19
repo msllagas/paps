@@ -101,6 +101,56 @@ a:visited {
 .nav__link.scrolled {
   color: var(--color-2);
 }
+.nav__link .fa-caret-down {
+  margin-left: 1rem;
+}
+.hoverdrop {
+  position: relative;
+}
+.services--container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-1);
+  top: 100%; /* Position below the .nav__item */
+  visibility: hidden; /* Hide initially */
+  opacity: 0; /* Hide initially */
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.services--container button {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: background-color .3s ease-in-out;
+  color: var(--white);
+  width: 100%;
+}
+.services--container button:hover{
+  background-color: var(--white);
+}
+.services--container .nav__link.scrolled{
+  color: var(--white);
+}
+.services--container button:hover .nav__link{
+  color: var(--color-1);
+}
+.services--container .nav__link{
+  font-size: 1.5rem;
+}
+.hoverdrop:hover .services--container {
+  visibility: visible; /* Show on hover */
+  top: 100%; /* Adjust to position below the .nav__item */
+  opacity: 1; /* Show on hover */
+}
 
 .btn__sched:link,
 .btn__sched:visited {
@@ -745,6 +795,7 @@ a:visited {
 .servicesp__hero--title {
   max-width: 80%;
   text-align: center;
+  margin: auto;
 }
 .servicesp__hero--title h1 {
   font-family: var(--font-family-cherrybomb);
@@ -772,28 +823,32 @@ a:visited {
   color: white;
   cursor: pointer;
   font-size: 2rem;
-  border-radius:20% 20% 0% 0% / 100% 100% 10% 22% 
+  border-radius: 20% 20% 0% 0% / 100% 100% 10% 22%;
+  margin: 0 1rem;
 }
-.grooming__pricing--table{
+
+.grooming__pricing--table {
   color: var(--color-1);
   background-color: var(--white);
   padding: 2rem 3rem;
   border-radius: 15px;
+  max-width: 60%;
+  margin: auto;
 }
 .grooming__pricing--table table {
   border-collapse: collapse;
   width: 100%;
   font-size: 1.75rem;
 }
-.pricing--title{
+.pricing--title {
   /* white-space: nowrap;  */
   font-size: 2rem;
 }
-.breed-s{
+.breed-s {
   width: 4rem;
   margin-top: 2rem;
 }
-.breed-l{
+.breed-l {
   width: 9rem;
   margin-bottom: 3rem;
 }
@@ -802,22 +857,22 @@ a:visited {
   margin-top: 2rem;
   justify-content: center;
 }
-.breed-m--container img{
+.breed-m--container img {
   width: 6rem;
   margin-bottom: 3rem;
 }
-.pricing__description--container{
+.pricing__description--container {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   margin-bottom: 1rem;
 }
-.pricing__breeds--title{
-  white-space: nowrap; 
+.pricing__breeds--title {
+  white-space: nowrap;
   font-size: 1.5rem;
 }
-.pricing__breeds--subtitle{
+.pricing__breeds--subtitle {
   font-weight: 100;
   font-size: 1.25rem;
 }
@@ -828,13 +883,14 @@ th {
   text-align: end;
   position: relative;
 }
-th, td {
+th,
+td {
   text-align: center;
   padding: 2rem;
 }
 th:first-child,
 td:first-child {
-  width: 50%;
+  width: 25%;
   text-align: left;
 }
 
@@ -842,12 +898,15 @@ th:not(:first-child),
 td:not(:first-child) {
   width: 25%;
 }
-.price{
+td {
+  text-align: left;
+}
+.price {
   white-space: nowrap;
   position: relative;
 }
 
-.pricing__footer{
+.pricing__footer {
   display: flex;
   padding: 1rem;
   align-items: center;
@@ -857,7 +916,8 @@ td:not(:first-child) {
   font-family: var(--font-family-questrial);
   gap: 3rem;
   font-size: 1.3rem;
-
+  width: 60%;
+  margin: auto;
 }
 .pricing__footer ul {
   padding-left: 2rem;
@@ -865,8 +925,46 @@ td:not(:first-child) {
 .pricing__footer li {
   line-height: 2rem;
 }
-.tc--container{
+.tc--container {
   flex: 1;
+}
+.grooming__pricing--requirement {
+  color: var(--color-1);
+  background-color: var(--white);
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  max-width: 60%;
+  margin: auto;
+  padding: 5rem;
+}
+.requirement--container {
+  text-align: left;
+  font-size: 1.75rem;
+  margin-top: 2rem;
+}
+.requirement--title {
+  font-size: 2rem;
+}
+.requirement--content {
+  text-align: left;
+  line-height: 2.75rem;
+}
+.requirement--content ol[type="a"] {
+  padding-left: 5rem;
+}
+.requirement--content p {
+  margin: 1rem auto;
+  padding-left: 5rem;
+}
+.button--tab.active {
+  background-color: var(--color-1);
+}
+.tabcontent {
+  display: none;
+}
+
+.none {
+  display: none;
 }
 
 /* FAQs Page */
@@ -1226,6 +1324,21 @@ td:not(:first-child) {
 .homepage__image.no-display {
   display: none;
 }
+.text-transform-uppercase {
+  text-transform: uppercase;
+}
+.font-weight-bolder {
+  font-weight: bolder;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.text-decoration-underline {
+  text-decoration: underline;
+}
+.pl-3 {
+  padding-left: 3rem;
+}
 
 @media only screen and (max-width: 1100px) {
   html {
@@ -1343,14 +1456,18 @@ td:not(:first-child) {
     margin: auto;
     padding: 1rem;
   }
-  .pricing__footer{
-    max-width: 90%;
+  .pricing__footer {
     margin: auto;
     flex-direction: column;
     align-items: flex-start;
+    width: 95%;
   }
   .pricing__footer .headline__showcase--links {
     align-self: center;
+  }
+  .grooming__pricing--requirement {
+    max-width: 95%;
+    margin: auto;
   }
 }
 
@@ -1513,24 +1630,38 @@ td:not(:first-child) {
   .pricing__breeds--subtitle {
     font-size: 1rem;
   }
-  th, td {
-    padding: .5rem;
+  th,
+  td {
+    padding: 0.5rem;
   }
-  td{
+  td {
     font-size: 1.5rem;
+    padding: 1rem;
   }
-  td:not(.price) {
+  /* td:not(.price) {
     padding: 1rem 2rem 1rem 1rem;
-  }
-  .price{
+  } */
+  .price {
     position: relative;
   }
-  .price p{
+  .price p {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     margin: auto;
-    padding-top:1rem;
+    padding-top: 1rem;
+  }
+  .button--tab {
+    padding: 1rem 5rem;
+    margin: 0 1rem;
+    max-width: 20rem;
+    font-size: 1.5rem;
+  }
+  .requirement--content ol[type="a"] {
+    padding-left: 3rem;
+  }
+  .requirement--content p {
+    padding-left: 1rem;
   }
 }

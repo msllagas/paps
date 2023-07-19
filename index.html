@@ -27,10 +27,25 @@
         <li class="nav__item">
           <a href="#about" class="nav__link" data-page="about">about us</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item hoverdrop">
           <a href="#services" class="nav__link" data-page="services"
-            >services</a
-          >
+            >services<i class="fa-solid fa-caret-down"></i
+          ></a>
+          <div class="services--container">
+            <button id="grooming-services-button">
+              <a
+                href="#services"
+                class="nav__link"
+                data-page="services"
+                >Grooming Services</a
+              >
+            </button>
+            <button id="boarding-services-button">
+              <a href="#services" class="nav__link" data-page="services"
+                >Pet Boarding Services</a
+              >
+            </button>
+          </div>
         </li>
         <li class="nav__item">
           <a href="#faqs" class="nav__link" data-page="faqs">faqs</a>
@@ -382,106 +397,331 @@
       <!-- Services Page -->
       <div class="page" id="services">
         <section class="servicesp__hero">
-          <div class="servicesp__hero--title">
-            <h1>Grooming Services</h1>
-            <img src="/assets/swirl_divider.png" alt="" class="swirl-divider" />
-            <p>
-              We are dedicated to providing exceptional care and top-notch
-              services for your beloved furry companions. Here's a comprehensive
-              description of the grooming services we offer:
-            </p>
-          </div>
-          <div class="grooming__pricing">
-            <div class="grooming__pricing--tabs">
-              <button class="button--tab">Grooming</button>
+          <div class="grooming__services">
+            <div class="servicesp__hero--title">
+              <h1>Grooming Services</h1>
+              <img
+                src="/assets/swirl_divider.png"
+                alt=""
+                class="swirl-divider"
+              />
+              <p>
+                We are dedicated to providing exceptional care and top-notch
+                services for your beloved furry companions. Here's a
+                comprehensive description of the grooming services we offer:
+              </p>
             </div>
-            <div class="grooming__pricing--table">
-              <table>
-                <tr>
-                  <th class="pricing--title">Grooming Packages</th>
-                  <th>
-                    <img
-                      src="/assets/smallbreed.png"
-                      alt="Small Breed dog"
-                      class="breed-s"
-                    />
-                    <div class="pricing__description--container">
-                      <p class="pricing__breeds--title">Small Breed</p>
-                      <p class="pricing__breeds--subtitle">Up to 7kg</p>
-                    </div>
-                  </th>
-                  <th>
-                    <div class="breed-m--container">
-                      <img
-                        src="/assets/mediumbreed1.png"
-                        alt="Header 1 Image"
-                      />
-                      <img src="assets/mediumbreed2.png" alt="Header 2 Image" />
-                    </div>
-                    <div class="pricing__description--container">
-                      <p class="pricing__breeds--title">Medium Breed</p>
-                      <p class="pricing__breeds--subtitle">7kg - 15kg</p>
-                    </div>
-                  </th>
-                  <th>
-                    <img
-                      src="/assets/largebreed.png"
-                      alt="Large Breed dog"
-                      class="breed-l"
-                    />
-                    <div class="pricing__description--container">
-                      <p class="pricing__breeds--title">Large Breed</p>
-                      <p class="pricing__breeds--subtitle">16kg and up</p>
-                    </div>
-                  </th>
-                </tr>
-                <tr>
-                  <td>Shampoo, Blow Dry & Wash</td>
-                  <td class="price"><p>300 Php</p></td>
-                  <td class="price"><p>400 Php</p></td>
-                  <td class="price"><p>500 Php</p></td>
-                </tr>
-                <tr>
-                  <td>Shampoo, Blow Dry & Wash, Nail Trim</td>
-                  <td class="price"><p>350 Php</p></td>
-                  <td class="price"><p>450 Php</p></td>
-                  <td class="price"><p>550 Php</p></td>
-                </tr>
-                <tr>
-                  <td>Ticks Fleas Shampoo, Blow Dry & Brush, Nail Trim</td>
-                  <td class="price"><p>375 Php</p></td>
-                  <td class="price"><p>475 Php</p></td>
-                  <td class="price"><p>575 Php</p></td>
-                </tr>
-                <tr>
-                  <td>
-                    Hair Cut, Nail Trim, Nail File, Ear Cleaning, Toothbrush,
-                    Bath & Blow Dry, Cologne Spray
-                  </td>
-                  <td class="price"><p>500 Php</p></td>
-                  <td class="price"><p>600 Php</p></td>
-                  <td class="price"><p>700 Php</p></td>
-                </tr>
-              </table>
-            </div>
-            <div class="pricing__footer">
-              <div class="tc--container">
-                <p>Terms & Conditions</p>
-                <ul>
-                  <li>All Basic Packages include Ear Cleaning.</li>
-                  <li>Prices May Vary Per Breed And Hair Length.</li>
-                  <li>
-                    No Additional Fees Per Extra Hour of stay when grooming is
-                    only availed.
-                  </li>
-                  <li>Extra charges apply depending on the fur condition.</li>
-                </ul>
+            <div class="grooming__pricing">
+              <div class="grooming__pricing--tabs">
+                <button class="button--tab">Grooming</button>
               </div>
-              <div class="headline__showcase--links">
-                <a href="" class="contact__link btn">book now</a>
-                <p>OR</p>
-                <a href="" class="contact__link btn"><i class="fa-solid fa-phone"></i>
-                  <span style="text-decoration: underline; white-space: nowrap">0905 553 0204</span></a>
+              <div class="grooming__pricing--table">
+                <table>
+                  <tr>
+                    <th class="pricing--title">Grooming Packages</th>
+                    <th>
+                      <img
+                        src="/assets/smallbreed.png"
+                        alt="Small Breed dog"
+                        class="breed-s"
+                      />
+                      <div class="pricing__description--container">
+                        <p class="pricing__breeds--title">Small Breed</p>
+                        <p class="pricing__breeds--subtitle">Up to 7kg</p>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="breed-m--container">
+                        <img
+                          src="/assets/mediumbreed1.png"
+                          alt="Header 1 Image"
+                        />
+                        <img
+                          src="assets/mediumbreed2.png"
+                          alt="Header 2 Image"
+                        />
+                      </div>
+                      <div class="pricing__description--container">
+                        <p class="pricing__breeds--title">Medium Breed</p>
+                        <p class="pricing__breeds--subtitle">7kg - 15kg</p>
+                      </div>
+                    </th>
+                    <th>
+                      <img
+                        src="/assets/largebreed.png"
+                        alt="Large Breed dog"
+                        class="breed-l"
+                      />
+                      <div class="pricing__description--container">
+                        <p class="pricing__breeds--title">Large Breed</p>
+                        <p class="pricing__breeds--subtitle">16kg and up</p>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>Shampoo, Blow Dry & Wash</td>
+                    <td class="price"><p>300 Php</p></td>
+                    <td class="price"><p>400 Php</p></td>
+                    <td class="price"><p>500 Php</p></td>
+                  </tr>
+                  <tr>
+                    <td>Shampoo, Blow Dry & Wash, Nail Trim</td>
+                    <td class="price"><p>350 Php</p></td>
+                    <td class="price"><p>450 Php</p></td>
+                    <td class="price"><p>550 Php</p></td>
+                  </tr>
+                  <tr>
+                    <td>Ticks Fleas Shampoo, Blow Dry & Brush, Nail Trim</td>
+                    <td class="price"><p>375 Php</p></td>
+                    <td class="price"><p>475 Php</p></td>
+                    <td class="price"><p>575 Php</p></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Hair Cut, Nail Trim, Nail File, Ear Cleaning, Toothbrush,
+                      Bath & Blow Dry, Cologne Spray
+                    </td>
+                    <td class="price"><p>500 Php</p></td>
+                    <td class="price"><p>600 Php</p></td>
+                    <td class="price"><p>700 Php</p></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="pricing__footer">
+                <div class="tc--container">
+                  <p>Terms & Conditions</p>
+                  <ul>
+                    <li>All Basic Packages include Ear Cleaning.</li>
+                    <li>Prices May Vary Per Breed And Hair Length.</li>
+                    <li>
+                      No Additional Fees Per Extra Hour of stay when grooming is
+                      only availed.
+                    </li>
+                    <li>Extra charges apply depending on the fur condition.</li>
+                  </ul>
+                </div>
+                <div class="headline__showcase--links">
+                  <a href="" class="contact__link btn">book now</a>
+                  <p>OR</p>
+                  <a href="" class="contact__link btn"
+                    ><i class="fa-solid fa-phone"></i>
+                    <span
+                      style="text-decoration: underline; white-space: nowrap"
+                      >0905 553 0204</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boarding__services none">
+            <div class="servicesp__hero--title">
+              <h1>Pet Boarding Services</h1>
+              <img
+                src="/assets/swirl_divider.png"
+                alt=""
+                class="swirl-divider"
+              />
+              <p>
+                We are dedicated to providing exceptional care and top-notch
+                services for your beloved furry companions. Here's a
+                comprehensive description of the grooming services we offer:
+              </p>
+            </div>
+            <div class="grooming__pricing">
+              <div class="grooming__pricing--tabs whitespace-nowrap">
+                <button
+                  class="button--tab"
+                  onclick="openTab(event, 'boarding-services')"
+                  id="defaultOpen"
+                >
+                  Boarding
+                </button>
+                <button
+                  class="button--tab"
+                  onclick="openTab(event, 'boarding-requirements')"
+                >
+                  Requirements
+                </button>
+              </div>
+              <div
+                class="grooming__pricing--table tabContent"
+                id="boarding-services"
+              >
+                <table>
+                  <tr>
+                    <th class="pricing--title">Boarding Packages</th>
+                    <th>
+                      <img
+                        src="/assets/smallbreed.png"
+                        alt="Small Breed dog"
+                        class="breed-s"
+                      />
+                      <div class="pricing__description--container">
+                        <p class="pricing__breeds--title">Small Breed</p>
+                        <p class="pricing__breeds--subtitle">Up to 7kg</p>
+                      </div>
+                    </th>
+                    <th>
+                      <div class="breed-m--container">
+                        <img
+                          src="/assets/mediumbreed1.png"
+                          alt="Header 1 Image"
+                        />
+                        <img
+                          src="assets/mediumbreed2.png"
+                          alt="Header 2 Image"
+                        />
+                      </div>
+                      <div class="pricing__description--container">
+                        <p class="pricing__breeds--title">Medium Breed</p>
+                        <p class="pricing__breeds--subtitle">7kg - 15kg</p>
+                      </div>
+                    </th>
+                    <th>
+                      <img
+                        src="/assets/largebreed.png"
+                        alt="Large Breed dog"
+                        class="breed-l"
+                      />
+                      <div class="pricing__description--container">
+                        <p class="pricing__breeds--title">Large Breed</p>
+                        <p class="pricing__breeds--subtitle">16kg and up</p>
+                      </div>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="text-transform-uppercase font-weight-bolder">
+                        daycare
+                      </p>
+                      <p>Rates are pet pet</p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Daycare only</td>
+                    <td><p>200 Php for the first 3 hours</p></td>
+                    <td><p>250 Php for the first 3 hours</p></td>
+                    <td><p>250 Php for the first 3 hours</p></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <p>+ 50 Php for succeeding hour/s</p>
+                    </td>
+
+                    <td>
+                      <p>+ 50 Php for succeeding hour/s</p>
+                    </td>
+
+                    <td><p>+ 50 Php for succeeding hour/s</p></td>
+                  </tr>
+                  <tr>
+                    <td>Bath & Blow Dry</td>
+                    <td><p>50 Php</p></td>
+                    <td><p>70 Php</p></td>
+                    <td><p>70 Php</p></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p class="text-transform-uppercase font-weight-bolder">
+                        overnight
+                      </p>
+                      <p>Rates are per night/pet</p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Overnight + Bath and Blow dry for a minimum of 3 nights
+                    </td>
+                    <td>
+                      <p>500 Php<br />450 Php - 5 nights or more</p>
+                    </td>
+                    <td>
+                      <p>650 Php<br />600 Php - 5 nights or more</p>
+                    </td>
+                    <td>
+                      <p>650 Php 600 Php - 5 nights or more</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div
+                class="grooming__pricing--requirement tabContent"
+                id="boarding-requirements"
+              >
+                <h1 class="requirement--title">
+                  Boarding Daycare Requirements
+                </h1>
+                <div class="requirement--container">
+                  <div class="requirement--content">
+                    <ol type="1">
+                      <li>Up-to-date vaccinations</li>
+                      <ol type="a">
+                        <li>Rabies</li>
+                        <li>5in1 OR 6in1 OR 8in1</li>
+                        <li>Bordetella (Kennel cough)</li>
+                        <li>Treatment for ticks & fleas</li>
+                        <p class="text-decoration-underline">
+                          All these vaccinations + treatment must be given to
+                          your pet AT LEAST 2 DAYS prior to Boarding or Daycare.
+                        </p>
+                        <p>
+                          Please submit a
+                          <span
+                            class="text-transform-uppercase text-decoration-underline"
+                            >cover to cover</span
+                          >
+                          photo of your pet's vaccination records. Photo must
+                          show the
+                          <span class="text-decoration-underline"
+                            >name of your pet and if possible with weight</span
+                          >
+                          and other details of your pet's vaccination record.
+                        </p>
+                      </ol>
+                      <li>
+                        For Overnight Boarding, please bring food that is good
+                        enough for the length of stay or a bit extra in case you
+                        will need to extend. If it needs to be frozen, it must
+                        be in a zip lock and labeled according to your pet's
+                        name.
+                        <p>
+                          NOTE: Provide proper feeding instructions and for
+                          their vitamins/meds. Include the syringe for vitamins
+                          if applicable.
+                        </p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+              <div class="pricing__footer">
+                <div class="tc--container">
+                  <p>Terms & Conditions</p>
+                  <ul>
+                    <li>All Daycare Packages Includes Pet Food And Water</li>
+                    <li>Prices May Vary Per Breed</li>
+                    <li>Additional 50 Php Per Extra Hour</li>
+                  </ul>
+                </div>
+                <div class="headline__showcase--links">
+                  <a href="" class="contact__link btn">book now</a>
+                  <p>OR</p>
+                  <a href="" class="contact__link btn"
+                    ><i class="fa-solid fa-phone"></i>
+                    <span
+                      style="text-decoration: underline; white-space: nowrap"
+                      >0905 553 0204</span
+                    ></a
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -871,7 +1111,7 @@
           </div>
         </section>
       </div>
-      <!-- Schedule Appointmen Page -->
+      <!-- Schedule Appointment Page -->
       <div class="page" id="appointment">
         <section class="appointment__hero">
           <div class="appointment__hero--title">
