@@ -117,7 +117,7 @@ const sideNav = document.querySelector('.sidenav');
 sideNav.addEventListener('click', handleNavLinkClick);
 
 // Show the home page and set the active class for the first link by default
-showPage('services');
+showPage('home');
 const firstNavItem = document.querySelector('.nav__link');
 firstNavItem.classList.add('side-nav__item--active');
 
