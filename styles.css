@@ -904,6 +904,7 @@ td {
 .price {
   white-space: nowrap;
   position: relative;
+  text-align: center;
 }
 
 .pricing__footer {
@@ -1647,10 +1648,10 @@ td {
   .price p {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
     margin: auto;
     padding-top: 1rem;
+    transform: translateX(-50%);
   }
   .button--tab {
     padding: 1rem 5rem;
