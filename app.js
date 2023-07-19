@@ -117,9 +117,27 @@ const sideNav = document.querySelector('.sidenav');
 sideNav.addEventListener('click', handleNavLinkClick);
 
 // Show the home page and set the active class for the first link by default
-showPage('home');
+showPage('services');
 const firstNavItem = document.querySelector('.nav__link');
 firstNavItem.classList.add('side-nav__item--active');
+
+// Function for changing tabs in boarding services
+function openTab(event, tabName) {
+  var i, tabContent, buttonTab;
+  tabContent = document.getElementsByClassName("tabContent");
+  for (i = 0; i < tabContent.length; i++) {
+    tabContent[i].style.display = "none";
+  }
+  buttonTab = document.getElementsByClassName("button--tab");
+  for (i = 0; i < buttonTab.length; i++) {
+    buttonTab[i].className = buttonTab[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  event.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 
 // Function for the Card Accordion
@@ -138,8 +156,58 @@ accordionItems.forEach(item => {
   });
 });
 
+// Function for the Services Link dropdown Top bar
+document.addEventListener('DOMContentLoaded', function () {
+  const groomingServicesButton = document.getElementById('grooming-services-button');
+  const boardingServicesButton = document.getElementById('boarding-services-button');
+  const servicesLink = document.querySelector('.nav__link[data-page="services"]');
 
+  const groomingServicesSection = document.querySelector('.grooming__services');
+  const boardingServicesSection = document.querySelector('.boarding__services');
 
+  function setDefaultState() {
+    groomingServicesButton.classList.add('active');
+    boardingServicesButton.classList.remove('active');
+
+    groomingServicesSection.style.display = 'block';
+    boardingServicesSection.style.display = 'none';
+  }
+
+  function showGroomingServices() {
+    groomingServicesButton.classList.add('active');
+    boardingServicesButton.classList.remove('active');
+
+    groomingServicesSection.style.display = 'block';
+    boardingServicesSection.style.display = 'none';
+  }
+
+  function showBoardingServices() {
+    groomingServicesButton.classList.remove('active');
+    boardingServicesButton.classList.add('active');
+
+    groomingServicesSection.style.display = 'none';
+    boardingServicesSection.style.display = 'block';
+  }
+
+  groomingServicesButton.addEventListener('click', function () {
+    showGroomingServices();
+  });
+
+  boardingServicesButton.addEventListener('click', function () {
+    showBoardingServices();
+  });
+
+  servicesLink.addEventListener('click', function () {
+    setDefaultState();
+  });
+
+  // Check if the URL contains a hash for boarding services and show the appropriate section
+  if (window.location.hash === '#boarding-services') {
+    showBoardingServices();
+  } else {
+    setDefaultState();
+  }
+});
 
 
 
