@@ -133,7 +133,6 @@ function openTab(event, tabName) {
     buttonTab[i].className = buttonTab[i].className.replace(" active", "");
   }
   document.getElementById(tabName).style.display = "block";
-  event.currentTarget.className += " active";
 }
 
 // Get the element with id="defaultOpen" and click on it
@@ -160,31 +159,24 @@ accordionItems.forEach(item => {
 document.addEventListener('DOMContentLoaded', function () {
   const groomingServicesButton = document.getElementById('grooming-services-button');
   const boardingServicesButton = document.getElementById('boarding-services-button');
+  const serviceMenu1 = document.getElementById("services-menu-1")
+  const serviceMenu2 = document.getElementById("services-menu-2")
   const servicesLink = document.querySelector('.nav__link[data-page="services"]');
 
   const groomingServicesSection = document.querySelector('.grooming__services');
   const boardingServicesSection = document.querySelector('.boarding__services');
 
   function setDefaultState() {
-    groomingServicesButton.classList.add('active');
-    boardingServicesButton.classList.remove('active');
-
     groomingServicesSection.style.display = 'block';
     boardingServicesSection.style.display = 'none';
   }
 
   function showGroomingServices() {
-    groomingServicesButton.classList.add('active');
-    boardingServicesButton.classList.remove('active');
-
     groomingServicesSection.style.display = 'block';
     boardingServicesSection.style.display = 'none';
   }
 
   function showBoardingServices() {
-    groomingServicesButton.classList.remove('active');
-    boardingServicesButton.classList.add('active');
-
     groomingServicesSection.style.display = 'none';
     boardingServicesSection.style.display = 'block';
   }
@@ -201,14 +193,31 @@ document.addEventListener('DOMContentLoaded', function () {
     setDefaultState();
   });
 
-  // Check if the URL contains a hash for boarding services and show the appropriate section
-  if (window.location.hash === '#boarding-services') {
+  serviceMenu1.addEventListener('click' , function () {
+    closeNav();
+    showGroomingServices();
+  })
+  serviceMenu2.addEventListener('click', function () {
+    closeNav();
     showBoardingServices();
-  } else {
-    setDefaultState();
-  }
+  })
 });
 
+// Function for dropdown menu in sidenav
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
 
 
 
