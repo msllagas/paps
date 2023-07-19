@@ -107,14 +107,40 @@ a:visited {
 .hoverdrop {
   position: relative;
 }
+
+.dropdown-btn.active {
+  background-color: var(--color-3);
+  color: white;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: var(--color-2);
+  padding-left: 8px;
+  
+}
+.dropdown-btn {
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+.services-menu{
+  font-size: 1.5rem !important;
+}
 .services--container {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-1);
-  top: 100%; /* Position below the .nav__item */
-  visibility: hidden; /* Hide initially */
-  opacity: 0; /* Hide initially */
+  background-color: var(--color-2);
+  top: 100%; 
+  visibility: hidden; 
+  opacity: 0; 
   transition: opacity 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -130,20 +156,21 @@ a:visited {
   border: none;
   border-radius: 20px;
   background-color: transparent;
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   color: var(--white);
   width: 100%;
+  margin: 0.5rem auto;
 }
-.services--container button:hover{
+.services--container button:hover {
   background-color: var(--white);
 }
-.services--container .nav__link.scrolled{
+.services--container .nav__link.scrolled {
   color: var(--white);
 }
-.services--container button:hover .nav__link{
+.services--container button:hover .nav__link {
   color: var(--color-1);
 }
-.services--container .nav__link{
+.services--container .nav__link {
   font-size: 1.5rem;
 }
 .hoverdrop:hover .services--container {
@@ -199,13 +226,14 @@ a:visited {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: var(--color-2);
+  background-color: var(--color-1);
   overflow: hidden;
   transition: 0.5s;
   padding-top: 6rem;
 }
 
-.sidenav a {
+.sidenav a,
+.sidenav button {
   color: white;
   font-size: 2rem;
   padding: 1.75rem;
@@ -1481,7 +1509,7 @@ td {
     justify-content: center;
   }
   .homepage__hero {
-    padding: 10rem 0;
+    padding: 12rem 0 8rem 0rem;
   }
   .homepage__hero--heading {
     font-size: 5.75rem;

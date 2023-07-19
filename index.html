@@ -33,10 +33,7 @@
           ></a>
           <div class="services--container">
             <button id="grooming-services-button">
-              <a
-                href="#services"
-                class="nav__link"
-                data-page="services"
+              <a href="#services" class="nav__link" data-page="services"
                 >Grooming Services</a
               >
             </button>
@@ -84,16 +81,35 @@
           class="side__link"
           >About Us</a
         >
-        <a
+        <!-- <a
           href="#services"
           onclick="closeNav()"
           data-page="services"
           class="side__link"
           >Services</a
-        >
-        <a href="#faqs" onclick="closeNav()" data-page="faqs" class="side__link"
-          >FAQs</a
-        >
+        > -->
+        <button class="side__link dropdown-btn">
+          <span class="text-transform-uppercase">Services</span>
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          <a
+            href="#services"
+            data-page="services"
+            id="services-menu-1"
+            class="services-menu"
+            >Grooming Services</a
+          >
+          <a
+            href="#services"
+            data-page="services"
+            onclick="closeNav()"
+            id="services-menu-2"
+            class="services-menu"
+            >Pet Boarding Services</a
+          >
+        </div>
+        <a href="#faqs" data-page="faqs" class="side__link">FAQs</a>
         <a
           href="#contact"
           onclick="closeNav()"
