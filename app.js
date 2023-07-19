@@ -133,6 +133,7 @@ function openTab(event, tabName) {
     buttonTab[i].className = buttonTab[i].className.replace(" active", "");
   }
   document.getElementById(tabName).style.display = "block";
+  event.currentTarget.className += " active";
 }
 
 // Get the element with id="defaultOpen" and click on it
