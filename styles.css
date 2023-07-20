@@ -27,12 +27,7 @@
 *::after,
 *:focus {
   box-sizing: inherit;
-  /* -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  /* 
   user-select: none; */
   outline: none;
 }
@@ -201,9 +196,9 @@ a:visited {
   font-size: 1.5rem;
 }
 .hoverdrop:hover .services--container {
-  visibility: visible; /* Show on hover */
-  top: 100%; /* Adjust to position below the .nav__item */
-  opacity: 1; /* Show on hover */
+  visibility: visible; 
+  top: 100%; 
+  opacity: 1; 
 }
 
 .btn__sched:link,
@@ -295,7 +290,6 @@ a:visited {
 .homepage__hero {
   flex-basis: 50%;
   color: var(--white);
-  /* margin-top: 10rem; */
 }
 .homepage__hero--heading {
   font-size: 8rem;
@@ -705,10 +699,8 @@ a:visited {
   font-size: 5.5rem;
 }
 .hero__headline p {
-  /* max-width: 70%; */
   margin: 2rem auto;
   font-size: 1.75rem;
-  /* text-align: left; */
   line-height: 3rem;
   text-align: justify;
 }
@@ -716,9 +708,6 @@ a:visited {
   display: inline-block;
   padding: 2rem 4rem;
 }
-/* .hero__headline p:last-of-type {
-  margin-bottom: 5rem;
-} */
 .hero__headline .contact__link {
   padding: 2rem 4rem;
   border: none;
@@ -838,11 +827,11 @@ a:visited {
 }
 /* Services Page */
 #services {
-  background-image: url("/assets/grooming1.jpg"); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-  height: 100%; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-image: url("/assets/grooming1.jpg");
+  background-color: #cccccc; 
+  height: 100%; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   background-size: cover;
 }
 .servicesp__hero {
@@ -902,7 +891,6 @@ a:visited {
   font-size: 1.75rem;
 }
 .pricing--title {
-  /* white-space: nowrap;  */
   font-size: 2rem;
 }
 .breed-s {
@@ -914,7 +902,7 @@ a:visited {
   margin-bottom: 3rem;
 }
 .breed-m--container {
-  display: flex; /* Use flexbox to create side-by-side images */
+  display: flex; 
   margin-top: 2rem;
   justify-content: center;
 }
@@ -1165,8 +1153,6 @@ td {
 
 /* Contact Us Page */
 .contacts__hero {
-  /* height: auto; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1211,9 +1197,6 @@ td {
 .contacts__information--container {
   margin-bottom: 4rem;
 }
-/* .contacts__information--container:last-of-type p {
-  max-width:80%;
-} */
 .contacts__information--subtitle {
   font-size: 2.2rem;
   text-transform: uppercase;
@@ -1468,14 +1451,6 @@ td {
     flex-direction: column;
     gap: 2rem;
   }
-  /* .homepage__hero {
-    position: absolute;
-    z-index: 10;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 80%;
-  } */
   .homepage__image {
     flex: 0 0 70%;
   }
@@ -1485,11 +1460,6 @@ td {
   .image--container.left {
     margin-right: 0;
   }
-  /* }
-  .hero__headline {
-    min-width: 90%;
-    padding: 3rem;
-  } */
   .hero__headline p {
     max-width: 90%;
   }
@@ -1609,10 +1579,6 @@ td {
   .footer__info {
     margin-bottom: 3rem;
   }
-  /* }
-  .hero__headline {
-    padding: 5rem 3rem;
-  } */
   .hero__headline p {
     max-width: 100%;
     text-align: justify;
@@ -1709,9 +1675,6 @@ td {
     font-size: 1.5rem;
     padding: 1rem;
   }
-  /* td:not(.price) {
-    padding: 1rem 2rem 1rem 1rem;
-  } */
   .price {
     position: relative;
   }
