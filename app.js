@@ -127,6 +127,32 @@ topNav.addEventListener('click', handleNavLinkClick);
 const sideNav = document.querySelector('.sidenav');
 sideNav.addEventListener('click', handleNavLinkClick);
 
+const buttonLinks = document.querySelector('.homepage__hero--links');
+buttonLinks.addEventListener('click', handleNavLinkClick)
+
+const servicesBtnLm = document.querySelector('.services__cards');
+servicesBtnLm.addEventListener('click', handleNavLinkClick)
+
+const bookingBtn = document.querySelector('.booking__links');
+bookingBtn.addEventListener('click', handleNavLinkClick)
+
+const aboutBtn = document.querySelector('.headline__showcase--links');
+aboutBtn.addEventListener('click', handleNavLinkClick)
+
+const gServiceBtn = document.querySelector('.gservices-bn-btn');
+gServiceBtn.addEventListener('click', handleNavLinkClick);
+
+const bServicesBtn = document.querySelector('.pbservices-bn-btn');
+bServicesBtn.addEventListener('click', handleNavLinkClick);
+
+const faqsBtn = document.querySelector('.faqs__contact');
+faqsBtn.addEventListener('click', handleNavLinkClick);
+
+const faqsHyperlink = document.querySelector('.faqs__card--details');
+faqsHyperlink.addEventListener('click', handleNavLinkClick);
+
+
+
 // Show the home page and set the active class for the first link by default
 showPage('home');
 const firstNavItem = document.querySelector('.nav__link');
@@ -174,6 +200,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const boardingServicesButton = document.getElementById('boarding-services-button');
   const serviceMenu1 = document.getElementById("services-menu-1")
   const serviceMenu2 = document.getElementById("services-menu-2")
+  const learnMoreBoarding = document.getElementById("lm-pb")
+  const learnMoreGrooming = document.getElementById("lm-gs")
   const servicesLink = document.querySelector('.nav__link[data-page="services"]');
 
   const groomingServicesSection = document.querySelector('.grooming__services');
@@ -213,6 +241,16 @@ document.addEventListener('DOMContentLoaded', function () {
   serviceMenu2.addEventListener('click', function () {
     closeNav();
     showBoardingServices();
+  })
+  serviceMenu2.addEventListener('click', function () {
+    closeNav();
+    showBoardingServices();
+  })
+  learnMoreBoarding.addEventListener('click', function () {
+    showBoardingServices();
+  })
+  learnMoreGrooming.addEventListener('click', function () {
+    showGroomingServices();
   })
 });
 

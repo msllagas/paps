@@ -19,7 +19,9 @@
   </head>
   <body>
     <header class="header">
-      <img src="/assets/logo_resized.png" alt="paps shop logo" class="logo" />
+      <a href="">
+        <img src="/assets/logo_resized.png" alt="paps shop logo" class="logo" />
+      </a>
       <ul class="nav">
         <li class="nav__item">
           <a href="#home" class="nav__link" data-page="home">home</a>
@@ -33,12 +35,20 @@
           ></a>
           <div class="services--container">
             <button id="grooming-services-button">
-              <a href="#services" class="nav__link service--link" data-page="services" id="gservices"
+              <a
+                href="#services"
+                class="nav__link service--link"
+                data-page="services"
+                id="gservices"
                 >Grooming Services</a
               >
             </button>
             <button id="boarding-services-button">
-              <a href="#services" class="nav__link service--link" data-page="services" id="bservices"
+              <a
+                href="#services"
+                class="nav__link service--link"
+                data-page="services"
+                id="bservices"
                 >Pet Boarding Services</a
               >
             </button>
@@ -108,7 +118,9 @@
             >Pet Boarding Services</a
           >
         </div>
-        <a href="#faqs" onclick="closeNav()" data-page="faqs" class="side__link">FAQs</a>
+        <a href="#faqs" onclick="closeNav()" data-page="faqs" class="side__link"
+          >FAQs</a
+        >
         <a
           href="#contact"
           onclick="closeNav()"
@@ -123,6 +135,8 @@
           class="side__link"
           >Schedule Appointment</a
         >
+        <hr />
+        <h3 class="legal">&copy; 2023 Developed by Alexandre Cauline Isip</h3>
       </div>
     </header>
     <main>
@@ -143,13 +157,13 @@
               are the Pinaka Astig!
             </p>
             <div class="homepage__hero--links questrial">
-              <a href="" class="homepage__hero--link">book now</a>
+              <a href="#appointment" class="homepage__hero--link" data-page="appointment">book now</a>
               <p>OR</p>
-              <a href="" class="homepage__hero--link"
+              <div  class="homepage__hero--link"
                 ><i class="fa-solid fa-phone"></i>
                 <span style="text-decoration: underline; white-space: nowrap"
                   >0905 553 0204</span
-                ></a
+                ></div
               >
             </div>
           </div>
@@ -174,7 +188,7 @@
                   We offer a comfortable and secure environment for your pets
                   when you need to be away.
                 </p>
-                <a href="#" class="card__details--btn btn">Learn More</a>
+                <a href="#services" id="lm-pb" class="card__details--btn btn" data-page="services">Learn More</a>
               </div>
             </div>
             <div class="services__card">
@@ -185,7 +199,7 @@
                   Our skilled and compassionate groomers specialize in keeping
                   your pets looking and feeling their best.
                 </p>
-                <a href="" class="card__details--btn btn">Learn More</a>
+                <a href="#services" id="lm-gs" class="card__details--btn btn" data-page="services">Learn More</a>
               </div>
             </div>
             <div class="services__card">
@@ -197,7 +211,7 @@
                   formulated with gentle ingredients to enure thorough yet mild
                   cleanse of your pets.
                 </p>
-                <a href="" class="card__details--btn btn">Learn More</a>
+                <a href="#contact" class="card__details--btn btn" data-page="contact">Learn More</a>
               </div>
             </div>
           </div>
@@ -305,13 +319,13 @@
             <p>for Long Term Stays Over 30 Days</p>
           </div>
           <div class="booking__links">
-            <a href="" class="contact__link btn">book now</a>
+            <a href="#appointment" class="contact__link btn" data-page="appointment">book now</a>
             <p>OR</p>
-            <a href="" class="contact__link btn"
+            <div class="contact__link"
               ><i class="fa-solid fa-phone"></i>
               <span style="text-decoration: underline; white-space: nowrap"
                 >0905 553 0204</span
-              ></a
+              ></div
             >
           </div>
         </section>
@@ -338,12 +352,10 @@
               and cats, ensuring they receive the utmost comfort, attention, and
               pampering throughout their stay.
             </p>
-            <button class="contact__link btn">
-              <a href="">why us?</a>
-            </button>
+              <a href="#because-section" class="contact__link btn">why us?</a>
           </div>
         </section>
-        <section class="about__headline">
+        <section class="about__headline" id="because-section">
           <div class="headline__text">
             <!-- Insert Icon here -->
             <i class="fa-solid fa-chevrons-down"></i>
@@ -394,13 +406,13 @@
               </h2>
             </div>
             <div class="headline__showcase--links">
-              <a href="" class="contact__link btn">book now</a>
+              <a href="#appointment" class="contact__link btn" data-page="appointment">book now</a>
               <p>OR</p>
-              <a href="" class="contact__link btn"
+              <div class="contact__link "
                 ><i class="fa-solid fa-phone"></i>
                 <span style="text-decoration: underline; white-space: nowrap"
                   >0905 553 0204</span
-                ></a
+                ></div
               >
             </div>
             <div class="headline__showcase--image">
@@ -515,15 +527,15 @@
                     <li>Extra charges apply depending on the fur condition.</li>
                   </ul>
                 </div>
-                <div class="headline__showcase--links">
-                  <a href="" class="contact__link btn">book now</a>
+                <div class="headline__showcase--links gservices-bn-btn">
+                  <a href="#appointment" class="contact__link btn" data-page="appointment">book now</a>
                   <p>OR</p>
-                  <a href="" class="contact__link btn"
+                  <div class="contact__link"
                     ><i class="fa-solid fa-phone"></i>
                     <span
                       style="text-decoration: underline; white-space: nowrap"
                       >0905 553 0204</span
-                    ></a
+                    ></div
                   >
                 </div>
               </div>
@@ -726,15 +738,15 @@
                     <li>Additional 50 Php Per Extra Hour</li>
                   </ul>
                 </div>
-                <div class="headline__showcase--links">
-                  <a href="" class="contact__link btn">book now</a>
+                <div class="headline__showcase--links pbservices-bn-btn">
+                  <a href="#appointment" class="contact__link btn" data-page="appointment">book now</a>
                   <p>OR</p>
-                  <a href="" class="contact__link btn"
+                  <div class="contact__link"
                     ><i class="fa-solid fa-phone"></i>
                     <span
                       style="text-decoration: underline; white-space: nowrap"
                       >0905 553 0204</span
-                    ></a
+                    ></div
                   >
                 </div>
               </div>
@@ -763,7 +775,7 @@
                   <div class="faqs__card--details">
                     <p>
                       You can book by clicking this
-                      <span>Reservation Form</span> or directly call us at 0905
+                      <span><a href="#appointment" data-page="appointment">Reservation Form</a></span> or directly call us at 0905
                       553 0204.
                     </p>
                   </div>
@@ -1007,7 +1019,7 @@
           </div>
           <div class="faqs__contact">
             <p>Didn't find what you're looking for?</p>
-            <a href="" class="contact__link btn">contact us </a>
+            <a href="#contact" class="contact__link btn" data-page="contact">contact us </a>
           </div>
         </section>
       </div>
@@ -1221,17 +1233,26 @@
             <img src="/assets/logo_resized.png" alt="" />
             <div class="socials--links">
               <div class="socials__container">
-                <a href="">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100087245741360"
+                  target="_blank"
+                >
                   <i class="fa-brands fa-facebook-f"></i>
                 </a>
               </div>
               <div class="socials__container">
-                <a href="">
+                <a
+                  href="https://www.instagram.com/paps_by_pinang/?fbclid=IwAR1Dt3OdZEAi7xIZ1Dpj-1EtbdrtCK8-lCNjkPYlW0fM6t_w5T2TW1_3le0"
+                  target="_blank"
+                  >
                   <i class="fa-brands fa-instagram"></i>
                 </a>
               </div>
               <div class="socials__container">
-                <a href="">
+                <a
+                  href="https://www.tiktok.com/@paps_by_pinang?_t=8e7bXu0FyaH&_r=1"
+                  target="_blank"
+                  >
                   <i class="fa-brands fa-tiktok"></i>
                 </a>
               </div>
@@ -1252,8 +1273,12 @@
             <p><a href="#about" data-page="about">About Us</a></p>
             <p><a href="#services" data-page="services">Services</a></p>
             <p><a href="#faqs" data-page="faqs">FAQs</a></p>
-            <p><a href="#contact" data-page="contact" >Contact Us</a></p>
-            <p><a href="#appointment" data-page="appointment">Schedule an Appointment</a></p>
+            <p><a href="#contact" data-page="contact">Contact Us</a></p>
+            <p>
+              <a href="#appointment" data-page="appointment"
+                >Schedule an Appointment</a
+              >
+            </p>
           </div>
         </div>
         <hr />

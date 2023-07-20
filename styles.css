@@ -712,6 +712,10 @@ a:visited {
   line-height: 3rem;
   text-align: justify;
 }
+.hero__headline .contact__link {
+  display: inline-block;
+  padding: 2rem 4rem;
+}
 /* .hero__headline p:last-of-type {
   margin-bottom: 5rem;
 } */
