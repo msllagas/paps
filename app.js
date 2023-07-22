@@ -270,6 +270,15 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
-
+// Function for smooth scrolling in about us page
+document.addEventListener('click', function(e) {
+  var className = 'smooth';
+  var classList = document.documentElement.classList;
+  if (e.target.dataset.smoothScroll) {
+    classList.add(className)
+  } else {
+    classList.remove(className)
+  }
+})
 
 
