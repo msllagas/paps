@@ -6,7 +6,7 @@ var swiper = new Swiper(".mySwiper", {
     initialSlide: 1,
   coverflowEffect: {
     rotate: 0, // 50
-    stretch: -20, // 0
+    stretch: -25, // 0
     depth: 100,
     modifier: 2, // 1
     slideShadows: false,
