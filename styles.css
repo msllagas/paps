@@ -461,6 +461,7 @@ a:visited {
   font-size: 1.5rem;
   display: none;
   line-height: 2.25rem;
+  text-align: left;
 }
 .card__rating .fa-paw {
   font-size: 3rem;
@@ -745,7 +746,7 @@ a:visited {
 }
 .headline__text--body p {
   font-size: 1.75rem;
-  text-align: justify;
+  text-align: left;
   margin: 2rem;
   line-height: 3rem;
 }
@@ -1113,8 +1114,6 @@ td {
 }
 .faqs__card--details {
   margin: 2rem auto;
-  text-align: justify;
-  hyphens: auto;
 }
 .faqs__card--details span {
   text-decoration: underline;
@@ -1191,7 +1190,7 @@ td {
 }
 .contacts__information p {
   font-size: 1.75rem;
-  text-align: justify;
+  text-align: left;
   width: 95%;
 }
 .contacts__information--container {
@@ -1660,6 +1659,7 @@ td {
   }
   .servicesp__hero--title p {
     max-width: 100%;
+    text-align: left;
   }
   .pricing__breeds--title {
     font-size: 1rem;
