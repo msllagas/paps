@@ -1646,6 +1646,7 @@ td {
   }
   .appointment__hero--title p {
     max-width: 100%;
+    text-align: left;
   }
   .appointment__form--wrapper {
     padding: 3rem;
